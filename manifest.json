@@ -1,0 +1,28 @@
+{
+  "name": "vaxxr",
+  "description": "Let's get the jab!",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://myturn.ca.gov/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.primarybio.com/r/ccsf-public/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
