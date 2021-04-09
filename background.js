@@ -38,7 +38,10 @@ function fillMyTurn(tabId, form) {
                 sendClick(tabId, "//input[@id='q-screening-disability-No']");
     
                 sendSelect(tabId, "//select[@id='q-screening-eligibility-industry']", "Communications and IT");
+                sendClick(tabId, "//input[@id='q-screening-homeless-No']");
                 sendSelect(tabId, "//select[@id='q-screening-eligibility-county']", "San Francisco");
+                sendClick(tabId, "//input[@id='q-screening-different-county-No']");
+
                 sendClick(tabId, "//button[@data-testid='continue-button']");
                 wait(tabId, "//button[@data-testid='location-search-page-continue']",
                     function() {
